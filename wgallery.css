@@ -1,0 +1,128 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+  
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    padding:8px 8px;
+  }
+
+.imagetext1{
+    margin-top: 10px;
+}
+
+.imagetextdiff {
+    margin-top: 60px;
+}
+.imagetext2{
+    margin-top: 60px;
+}
+.column {
+    flex: 20%;
+    max-width: 18.5%;
+    padding: 8px 8px; 
+}
+  
+.column img {
+    margin-top: 30px;
+    vertical-align: middle;
+    width: 100%;
+}
+
+
+.topheadings {
+    display: flex;
+    margin: auto;
+    float: right;
+    margin-top: 15px;
+    margin-right: 40px;
+    
+}
+
+
+.logo{
+    margin-right: 393px;
+    margin-top: 10px;
+    position: relative;
+}
+.logo2{
+    margin-top: 10px;
+    position: absolute;
+    margin-right: 393px;
+    opacity: 0;
+    transform: translate3d(0, 0, 50px)
+}
+
+.logo2:hover {
+    opacity: 1.0;
+    transition: opacity .45s ease-in-out;   
+    transform: translate3d(0, 0, 0)  
+}
+
+
+.topheadings ul li{
+    display: inline-block;
+    margin: 30px;
+    position: relative;
+    
+}
+.topheadings ul li a{
+    text-decoration: none;
+    color: black;
+    text-transform: uppercase; 
+    font-size: 18px;   
+}
+.topheadings ul li::after{
+    content:'';
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    background: gray;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+    transform: scaleX(0);
+}
+.topheadings ul li:hover::after{
+    transform: scaleX(1)
+}
+
+.gallery {
+    position: absolute;
+    top: 80px;
+}
+
+
+.imagetext1, .imagetext2, .imagetextdiff, .imagetext{
+    position: relative;
+}
+
+.imagetext1 div, .imagetext2 div, .imagetextdiff div, .imagetext div{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: black;
+    color: white;
+    margin-bottom: 10px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: visibility 0s, opacity 0.5s linear; 
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.imagetext1:hover, .imagetext2:hover, .imagetextdiff:hover, .imagetext:hover{
+    cursor: pointer;
+}
+
+.imagetext1:hover div, .imagetext2:hover div, .imagetextdiff:hover div, .imagetext:hover div {
+    width: auto;
+    padding: 8px 15px;
+    visibility: visible;
+    opacity: 0.7; 
+}
